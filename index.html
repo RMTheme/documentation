@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html id="html">
+<head lang="en">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>RMTheme Help Guide | RMWebLab</title>
+    <style type="text/css">
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+            margin: 0;
+            padding: 0;
+        }
+        * {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+        :before, :after {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+        img, object, embed {max-width: 100%; height: auto;}
+        object, embed {height: 100%;}
+        img { margin: 1.25% 0; -ms-interpolation-mode: bicubic; }
+        html {
+            background-color: #F0F1F3;
+            padding: 2%;
+        }
+        body {
+            font-size: 16px;
+            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            color: #242424;
+            max-width: 800px;
+            margin: 5% auto;
+
+        }
+        body::after {
+            clear: both;
+            content: "";
+            display: table;
+        }
+        header {
+            margin-bottom: 8%;
+        }
+        footer {
+            text-align: center;
+        }
+        h1, h2, h3, h4, h5, h1 a {
+            color: #263A48;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        h1, h2 {
+            font-size: 36px;
+            padding-bottom: 0.3em;
+            margin-bottom: 0.4em;
+            border-bottom: 1px solid #eee
+        }
+        h2 {
+            font-size: 22px;
+            padding-bottom: 0.6em;
+            margin-bottom: 0.6em;
+            margin-top: 2.5em;
+        }
+        h3 {
+            font-size: 18px;
+            margin-bottom: 0.3em;
+        }
+        h1 small a {
+            color: #98999C;
+            font-size: 15px;
+            font-weight: normal;
+            float: right;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+        section {
+            background: #fff;
+            margin-bottom: 1%;
+            position: relative;
+            padding: 6% 8%;
+        }
+        blockquote {
+            border-left: 3px solid #d54e21;
+            font-size: 16px;
+            padding: 0 0 0 20px;
+            color: #d54e21;
+        }
+        blockquote a {
+            color: #d54e21;
+            font-weight: 500;
+        }
+        blockquote code {
+            color: #d54e21;
+        }
+        code, cite {
+            background-color: #F0F2F4;
+            border-radius: 3px;
+            color: #000;
+            font: inherit;
+            padding: 2px 7px;
+            white-space: nowrap;
+        }
+        pre {
+			background-color: #F0F2F4;
+			clear: both;
+			border-radius: 4px;
+			display: block;
+			font-size: 14px;
+			overflow: auto;
+			padding: 20px;
+			white-space: pre-wrap;
+			word-wrap: break-word;
+		}
+		pre + img {
+			margin-top: 2.4em;
+		}
+        a {
+            color: #1e8cbe;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #d54e21;
+        }
+        ul {
+            list-style: none;
+        }
+        ol {
+            list-style: number;
+        }
+        ol li {
+            color: #98999C;
+            margin-bottom: 5px;
+        }
+        ol li:last-child {
+            margin-bottom: 0;
+        }
+        p, ul, ol, blockquote  {
+            margin-bottom: 4%;
+        }
+        ul ul {
+            padding-top: 0;
+            margin-bottom: 0;
+            margin-left: 4%;
+        }
+        ul ul li:before {
+            content: '-';
+            display: inline-block;
+            padding-right: 2%;
+        }
+
+        ul.col-2 {
+            color: #98999C;
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+            -webkit-column-gap: 20px;
+            -moz-column-gap: 20px;
+            column-gap: 20px;
+        }
+
+        @media screen and (min-width: 500px) {
+            ul.col-2 {
+                -webkit-column-count: 3;
+                -moz-column-count: 3;
+                column-count: 3;
+                -webkit-column-gap: 20px;
+                -moz-column-gap: 20px;
+                column-gap: 20px;
+            }
+        }
+        nav {
+            background: #F0F1F3;
+            min-width: 215px;
+            margin-bottom: 5px;
+            margin-top: 15px;
+        }
+        nav:first-of-type a {
+            color: #d54e21;
+            border-radius: 0;
+        }
+        nav:first-of-type a:hover {
+            color: #d54e21;
+        }
+        nav:first-of-type a:before {
+            background-color: #d54e21;
+        }
+        nav.affix {
+            position: fixed;
+            top: 20px;
+        }
+        nav.affix-bottom {
+            position: absolute;
+        }
+        nav a {
+            border-radius: 3px;
+            font-size: 15px;
+            display: block;
+            cursor: pointer;
+            font-weight: 500;
+            position: relative;
+            text-decoration: none;
+            padding: 10px 12px;
+            width: 100%;
+            padding-right: 3px;
+            border-bottom: 2px solid #fff;
+        }
+        nav a:before {
+            content: '';
+            width: 4px;
+            display: block;
+            left: 0;
+            position: absolute;
+            height: 100%;
+            display: none;
+            background: #1e8cbe;
+            top: 0;
+        }
+        nav a:hover {
+            background-color: #E6E8EA;
+            color: #1e8cbe;
+            text-decoration: underline;
+        }
+        nav a:hover:before {
+            display: block;
+        }
+        nav a:last-of-type {
+            border-bottom: none;
+        }
+        .gist {
+            margin-top: 5.1%;
+            margin-bottom: 5%;
+        }
+        @media screen and (max-width: 1050px) {
+            body {
+                margin: 0 auto;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            header span {
+                display: none;
+            }
+            h1 {
+                font-size: 26px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+        }
+        @media screen and (max-width: 514px) {
+            p, ul, ol, blockquote  {
+                margin-bottom: 8%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="Menu">
+        <header>
+            <h1>RMTheme Documentation</h1>
+            <p>Set-up & general guide to help you get the most out of your new WordPress theme. If you are still having trouble after reading this guide, <a href="https://rmtheme.com/support/" target="_blank">contact our help team</a>.</p>
+        </header>
+        <nav>
+            <a href="https://rmthemes.com/" target="blank">Live Demo</a>
+            <a href="https://docs.rmtheme.com/category/changelog/" target="_blank">Changelog</a>
+            <a href="https://codecanyon.net/user/rmweblab/portfolio">Buy RMTheme</a>
+        </nav>
+        <nav>
+            <a href="#GettingStarted">Getting Started</a>
+
+            <a href="#Navigation">Navigation</a>
+
+            <a href="#Templates">Templates</a>
+
+            <a href="#Portfolio">Portfolio</a>
+
+            <a href="#Widgets">Sidebar & Widgets</a>
+
+            <a href="#Plugins">Plugins</a>
+
+            <a href="#ChildTheme">RMTheme Child</a>
+
+            <a href="#Credits">Credits</a>
+        </nav>
+    </section>
+
+    <section id="GettingStarted">
+
+        <h1><a href="#GettingStarted">Getting Started</a><small><a href="#html">Back to Top</a></small></h1>
+
+        <p>This document covers the installation, set up, and use of this theme, and provides answers and solutions to common problems. We encourage you to first read this document thoroughly if you are experiencing any difficulties before contacting our support team.</p>
+
+        <h2>RMTheme | A Multipurpose Wordpress Theme</h2>
+        <p>This help guide also covers features that are only available in the <code>Pro Version</code> of RMTheme.</p>
+
+        <p>RMTheme has many more customization options including typographic selectors, stylistic color pickers and other premium plugin included. And in addition to these fantastic features, you'll also receive dashboard one-click demo installation and access to world-class theme support by our team of in-house professional WordPress developers.</p>
+
+        <blockquote>Please note that support is only offered for RMTheme. If you already have a premium license and have any questions that are beyond the scope of this document, feel free to ask us via our dedicated <a href="https://rmtheme.com/support/" target="blank">help center</a>.</blockquote>
+
+        <h2>WordPress Upload</h2>
+        <p>To upload through your Dashboard, select “Appearance” and then “Themes”. Next, select the “Install Themes” tab at the top of the page and then select the “Upload” link, right above the search field. Choose your file and select “Install Now”. Once the theme is fully uploaded and installed, click “Activate” to activate the WordPress theme.</p>
+        <blockquote>The theme files will be stored on your server in the <code>wp-content/themes</code> location.</blockquote>
+        <p>When uploading your theme with the installer, please ensure you are uploading the theme .zip file, not the entire package you downloaded. In this case, you will be uploading rmtheme.zip.</p>
+
+        <h2>FTP Upload</h2>
+        <p>To manually upload your new WordPress theme, login with your credentials to your website and locate the wp-content folder in your WordPress install files. Upload the <b>un-zipped</b> rmtheme folder into the: wp-content/themes folder. </p>
+        <p>Once uploaded, activate the theme by heading to the “Themes” menu in the WordPress Dashboard. Locate the RMTheme theme and hit “Activate”.</p>
+
+        <h2>Demo Site Setup</h2>
+        <p>To setup demo site, you need to inlstall all related or recommended plugins. </p>
+
+        <img src="images/install-plugins.jpg" alt="Installed Plugins" />
+
+        <h3>One click demo setup</h3>
+        <p>For one click demo setup of any of our ready demo site, you need to installed a free plugin. Once your setup complete, just deactive and delete it.</p>
+
+        <p><strong><a href="https://wordpress.org/plugins/one-click-demo-import/" target="_blank">One Click Demo Import</a></strong> pluign is available <a href="https://wordpress.org/plugins/one-click-demo-import/" target="_blank">here</a>.</p>
+
+        <p>After activating this plugin, you should be able to import any demo sites by a click like below.</p>
+
+        <img src="images/demo-import.jpg" alt="" />
+
+        <h2>Theme Support</h2>
+        <p>If you have a problem with the theme or found a bug, please let us know via our official <a target="_blank" href="https://rmtheme.com/support/">Help Center</a>. We take pride in our customer support and we will do what we can to assist you. If you are experiencing a theme issue, please first turn off all third party plugins to see if the problem persists.</p>
+        <blockquote>Please note that support is only offered for RMTheme. If you already have a license and have any questions that are beyond the scope of this document, feel free to ask us via our dedicated <a href="https://rmtheme.com/support/" target="_blank">help center</a>.</blockquote>
+
+    </section>
+
+    <section id="Navigation">
+
+        <h1><a href="#Navigation">Navigation</a><small><a href="#html">Back to Top</a></small></h1>
+        <p>It is rather important to set your theme menu in the WordPress Dashboard. To do this, locate the Menu options by selecting the “Appearance” tab from the dashboard sidebar and then “Menus”.</p>
+        <p>Once you’re viewing the Menus, create a new menu and save it. After you’ve saved the menu, you can add it to a menu via the Menu Settings, below the Menu Structure area. Add your pages and links to the menu you just created in the Menu Structure area.</p>
+
+        <img src="images/menus.jpg">
+
+    </section>
+
+    <section id="Templates">
+
+        <h1><a href="#Templates">Templates</a><small><a href="#html">Back to Top</a></small></h1>
+        <p>RMTheme include WPBakery Visual Composer plugin in theme package. So unlimitted template posibility is here. Also RMTheme has few core template listed below.</p>
+        <ul>
+            <li>Default Template</li>
+            <li><a href="#">Single Page Site Template</a></li>
+            <li><a href="#Portfolio">Portfolio Template</a></li>
+            <li>Blank Page(no header/footer) Template</li>
+        </ul>
+
+        <h2>Layout and sidebar</h2>
+        <p>RMTheme has dynamic layout and sidebar functions where you can alter layout for any pages using its default template and dynamic sidebar.</p>
+
+        <img src="images/layout-sidebar.jpg" alt="" />
+
+
+    </section>
+
+    <section id="Portfolio">
+
+        <h1><a href="#Portfolio">Portfolio</a><small><a href="#html">Back to Top</a></small></h1>
+
+        <h2>RMTheme built in portfolio features</h2>
+
+        <p>RMTheme as built in portfolio options. Need to enabled it from theme settings. In is in <code>Theme Options => Layout and Advance => Enabled Custom Post Type Section</code></p>
+
+        <img src="images/portfolio-option.jpg" alt="" />
+
+        <p>After enabling this settings, you need to reload theme settings to see details portfolio settigns page.</p>
+
+        <img src="images/portfolio-settings.jpg" alt="" />
+
+        <h2>Portfolio Item and Meta fields</h2>
+
+        <p>You need to add portifolio items as custom post type and each items has also it's own meta field.</p>
+
+        <p>Portfolio item in backend.</p>
+        <img src="images/portfolio-items.jpg" alt="" />
+
+        <p>Portfolio item Edit screen</p>
+        <img src="images/portfolio-item-edit.jpg" alt="" />
+
+        <h2>Portfolio display in website</h2>
+
+        <p>RMTheme as Visual composer adon to display portfolio. and also have a portfolio template to display like gird or list view style. You can adjsut adjust in many ways. This is also support filter options</p>
+
+        <img src="images/portfolio-display.jpg" alt="" />
+
+    </section>
+
+    <section id="Widgets">
+
+        <h1><a href="#Widgets">Sidebar and Widgets</a><small><a href="#html">Back to Top</a></small></h1>
+        <p>RMTheme has an option to create dynamic sidebar and assign those using Sidebar and layout features. or you can assign those in very place in theme settings.</p>
+
+        <img src="images/new-widget.jpg" alt="" />
+        <img src="images/widget-dynamic.jpg" alt="" />
+        <img src="images/widget-assign.jpg" alt="" />
+
+
+        <h2>RTheme already registerd Sidebar</h2>
+        <p>The following sidebar are provided with our themes.</p>
+
+        <ul>
+            <li>Default Sidebar Widget Area</li>
+            <li>Footer Widget Area One</li>
+            <li>Footer Widget Area Two</li>
+            <li>Footer Widget Area Three</li>
+            <li>Footer Widget Area Four</li>
+            <li>Footer Widget Area Five</li>
+            <li>Footer Widget Area Six</li>
+            <li>Top Show/Hide 1</li>
+            <li>Top Show/Hide 2</li>
+        </ul>
+
+
+        <h2>RTheme already registerd Widgets</h2>
+        <p>The following widgets are provided with our themes.</p>
+
+        <ul>
+            <li>RM Popular Posts Widget</li>
+            <li>RM Facebook Likebox Widget</li>
+            <li>RM Recent Posts Widget</li>
+            <li>RM Flickr Widget</li>
+            <li>RM Featured Posts Widget</li>
+            <li>RM Related Posts Widget</li>
+            <li>RM Social Networks Widget</li>
+            <li>RM Posts Tabs Widget</li>
+            <li>RM Author Widget</li>
+            <li>RM Recent Work Widget</li>
+            <li>RM Recent Testimonial Widget</li>
+            <li>RM Team Member Widget</li>
+        </ul>
+
+        <h2>Using the Widgets</h2>
+        <p>To employ a widget, simply go to your Widgets editor (located in your WordPress Dashboard in the “Appearance” menu) and drag your widgets into the specified widget areas.</p>
+
+    </section>
+
+    <section id="Plugins">
+
+        <h1><a href="#Plugins">Plugins</a><small><a href="#html">Back to Top</a></small></h1>
+        <p>To install any of our included plugins, you can just installed by required plugin menu from admin menu. <code>Appearance => Install Plugins</code></p>
+
+        <h2>RMTheme Plugins</h2>
+        <p>RMTheme is compatible with many of our custom developed WordPress Plugins.</p>
+
+        <ul>
+            <li>RMTheme Canonic <small> - required plugin</small></li>
+            <li>Redux Framework <small> - required plugin</small></li>
+            <li>RMTheme MailChimp</li>
+            <li>Revolution Slider <small> - premium plugin</small></li>
+            <li>WPBakery Visual Composer <small> - premium plugin</small></li>
+        </ul>
+
+    </section>
+
+    <section id="ChildTheme">
+
+        <h1><a href="#ChildTheme">RMTheme Child Theme</a><small><a href="#html">Back to Top</a></small></h1>
+        <p>A child theme is a theme that inherits the functionality and styling of another theme, called the parent theme. Child themes are <b>the recommended way of modifying an existing theme</b>.</p>
+
+        <h2>Why use a Child Theme?</h2>
+        <p>There are one main reason why you would want to use a child theme: <b>If you modify a theme directly and it is updated, then your modifications <u>WILL</u> be lost.</b> By using a child theme you will ensure that your modifications are preserved.</p>
+
+        <h2>Installing the Child theme</h2>
+        <p>Log in to your site's administration panel, and go to Administration Panels > Appearance > Themes. Click "Add New" and follow the directions to upload the <cite>rmtheme-child.zip</cite> file, located in the <cite>rmtheme-package/theme/</cite> folder.</p><p>Next simply click "Activate" and both the RMTheme theme and RMTheme child theme will be active on your WordPress site. Now you're ready to customize away.</p>
+
+        <blockquote>Note that this is the same exact method we referred to in the <a href="#GettingStarted">Getting Started</a> section of this guide. You should see your child theme listed and ready for activation.</blockquote>
+
+        <h2>Customizing Template Files</h2>
+        <p>If you want to change more than just the stylesheet, your child theme can override any file in the parent theme: simply include a file of the same name in the child theme directory, and <u>it will override the equivalent file</u> in the parent theme directory when your site loads.</p><p>For instance, if you want to change the PHP code for the site header, you can include a header.php in your child theme's directory, and that file will be used instead of the parent theme's header.php.</p>
+
+        <h2>Child Theme Functions.php</h2>
+        <p>Unlike style.css, the functions.php of a child theme does not override its counterpart from the parent. Instead, it is loaded in addition to the parent’s functions.php. (Specifically, it is loaded right before the parent’s file.)</p>
+
+        <p>In that way, the functions.php of a child theme provides a smart, trouble-free method of modifying the functionality of a parent theme.</p>
+
+        <h2>Adding PHP Functions</h2>
+        <p>Say that you want to add a PHP function to your theme. The fastest way would be to open the rmtheme/functions.php file and put the function there... <b>But that’s not smart:</b> The next time RMTheme is updated, your function will disappear (as the entire contents of the /rmtheme/ folder are replaced upon an update.</p><p>However, there is an alternative way which is the smart way: you can create a child theme, add a functions.php file in it, and add your function to that file. The function will do the exact same job from there too, with the advantage that it will not be affected by future updates of the parent theme.</p>
+
+        <blockquote><b>DO NOT</b> copy the full content of functions.php of the parent theme into functions.php in the child theme. It's not a good practice by any means.</blockquote>
+
+        To learn more, read the <a href="https://codex.wordpress.org/Child_Themes" target="_blank">this article on the WordPress Codex &rarr;</a>
+
+    </section>
+
+    <section id="Credits">
+        <footer>
+            <a href="https://rmtheme.com/" target="blank">RMTheme</a>, a <a href="https://rmweblab.com" target="blank">RM Web Lab</a> theme developed by <a href="https://rmweblab.com" target="blank">RM Web Lab Team</a>
+        </footer>
+    </section>
+
+</body>
+</html>
